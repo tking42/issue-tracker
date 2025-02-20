@@ -15,7 +15,7 @@ const IssueDetails = ({ issue }: {issue: Issue}) => {
           </div>
           <Text>{issue.createdAt.toDateString()}</Text>
         </div>
-        <Card className='prose' mt='4'>
+        <Card className='prose max-w-full' mt='4'>
           <ReactMarkdown>{issue.description}</ReactMarkdown>
         </Card>
     </div>
