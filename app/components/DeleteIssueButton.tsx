@@ -8,6 +8,7 @@ const DeleteIssueButton = ({ issueId }: {issueId: number}) => {
 
    const router = useRouter()
    const [error, setError] = useState(false)
+
    const deleteIssue = async () => {
     try {
         await axios.delete('/api/issues/' + issueId)
@@ -16,6 +17,7 @@ const DeleteIssueButton = ({ issueId }: {issueId: number}) => {
     } catch (error) {
         setError(true)
     }
+}
    
   return (
     <div>
@@ -52,8 +54,6 @@ const DeleteIssueButton = ({ issueId }: {issueId: number}) => {
         </AlertDialog.Root>
     </div>
   )
-}
-
 }
 
 export default DeleteIssueButton
